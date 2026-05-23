@@ -30,6 +30,7 @@ terraform init
 
 ### Preview the actions:
 ```bash
+cd terraform
 terraform plan
 ```
 
