@@ -1,0 +1,62 @@
+name: "🐛 Deployment Bug Form"
+description: "File a structured form when a Codespaces or Terraform deployment fails."
+title: "[BUG]: "
+labels: ["bug", "terraform"]
+assignees: ["roshan-melvin"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thank you for reporting this deployment error! 
+        Before submitting, please make sure you have scrubbed your execution logs of sensitive credentials, cloud tokens, or passwords.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Describe the Bug"
+      description: "A clear and concise description of what the deployment bug is."
+      placeholder: "What went wrong with the workspace execution?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: "What commands did you execute leading up to the failure?"
+      value: |
+        1. Go to Codespaces terminal.
+        2. Run command `terraform apply -auto-approve`.
+        3. See error.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: "Target Environment"
+      description: "Which cloud infrastructure layer was this deployed to?"
+      options:
+        - "Development (Dev Codespace)"
+        - "Staging / Testing"
+        - "Production Infrastructure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Terminal Error Logs"
+      description: "Paste your raw terminal output or Terraform trace lines here."
+      placeholder: "Enter console trace logs..."
+      render: bash
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Pre-Flight Checklist"
+      options:
+        - label: "I checked that my local workspace branch is fully up-to-date."
+          required: true
+        - label: "I verified that my active Cloud Provider tokens have not expired."
+          required: true
