@@ -1,5 +1,8 @@
 <!-- 🐛 Bug Fix PR Template -->
 
+## This works only with url parameter changing 
+<!-- Go to GitHub.com in your browser and click Compare & pull request.Because you have multiple templates, GitHub needs you to specify which one you want via the address bar. Look at the URL in your browser and append ?template=bug.md to the very end of it.Example URL Structure:https://github.comPress Enter to reload the page. The text box will instantly auto-populate with the bug template contents you saved. -->
+
 ## 🚨 Problem Summary
 <!-- What was the bug? Explain what was broken and why it happened. -->
 
