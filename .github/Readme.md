@@ -1,5 +1,4 @@
 ## 🛠️ Repository Configuration & Workflow Guide
-
 This project utilizes automated GitHub configurations to manage issues, pull requests, code ownership, and continuous integration. All configurations are located inside the hidden `.github/` directory.
 
 ### 📁 Directory Layout
