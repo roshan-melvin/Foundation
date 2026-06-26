@@ -21,4 +21,6 @@ jobs:
           fail-on-severity: high 
           
           # 🚫 Block specific bad open-source licenses if desired (e.g., AGPL-3.0)
+
           # deny-licenses: LGPL-3.0, AGPL-3.0
+
