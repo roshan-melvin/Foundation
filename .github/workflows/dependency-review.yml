@@ -5,22 +5,23 @@ on:
     branches: [ main, master, develop ]
 
 permissions:
-  contents: read # Required to fetch the repository files
+  contents: read 
+  pull-requests: write # 💥 Highly recommended to see the vulnerability breakdown in PR comments
 
 jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
       - name: 📁 Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      # 🔴 TEST TRIGGER: An unreviewed/vulnerable version of an action
+      # This old version contains a critical script injection risk.
+      - name: 🛡️ Injected Vulnerable Action
+        uses: actions/stale@v3.0.0
 
       - name: 🛡️ Run Dependency Review
         uses: actions/dependency-review-action@v4
         with:
-          # 🔴 CRITICAL: Fail the PR check if a package has a critical or high vulnerability
+          # This catches the critical flaw introduced by actions/stale@v3.0.0
           fail-on-severity: high 
-          
-          # 🚫 Block specific bad open-source licenses if desired (e.g., AGPL-3.0)
-
-          # deny-licenses: LGPL-3.0, AGPL-3.0
-
