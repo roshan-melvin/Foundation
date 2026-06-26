@@ -20,7 +20,6 @@ Root (Main)
 ```
 
 ---
-
 ### 📋 Issue Templates
 *   **Location:** `.github/ISSUE_TEMPLATE/`
 *   **Usage:** When creating a new issue on GitHub, you will be prompted with a choice menu to select either a **Bug Report** or a **Feature Request**. This standardises our tracking and resolution pipeline.
