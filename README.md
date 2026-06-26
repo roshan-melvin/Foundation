@@ -62,3 +62,7 @@ terraform apply -auto-approve
   }
   ```
 </details>
+
+### Gist:
+
+<script src="https://gist.github.com/roshan-melvin/ee77753c1fe89122e467c1fbf804c00a.js"></script>

@@ -6,6 +6,8 @@
     "lint": "echo '⚡ Educational Demo: Simulating Linter Check... Passed!'",
     "test": "echo '⚡ Educational Demo: Simulating Test Suite... Passed!'"
   },
-  "dependencies": {},
+  "dependencies": {
+  "lodash": "4.17.4"
+  },
   "devDependencies": {}
 }
