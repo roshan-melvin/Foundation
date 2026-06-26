@@ -1,7 +1,8 @@
 // Educational placeholder file
 
 
-const AWS_SECRET_KEY = "AKIAIOSFODNN7EXAMPLE"; // CodeQL or secret scanning will flag this!
+// Add this to test your automated pipeline block
+const MOCK_SLACK_TOKEN = "xoxb-123456789012-123456789012-ABCD1234efgh5678ijkl9012";
 
 
 function greet() {
