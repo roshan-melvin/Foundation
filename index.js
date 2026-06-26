@@ -1,9 +1,7 @@
-// Placeholder file to initialize CodeQL Analysis
-function greetUser(name) {
-  if (!name) {
-    return "Hello, World!";
-  }
-  return `Hello, ${name}!`;
-}
+// Educational placeholder file
+const AWS_SECRET_KEY = "AKIAIOSFODNN7EXAMPLE"; // CodeQL or secret scanning will flag this!
 
-greetUser("Developer");
+function greet() {
+  console.log("Welcome to the GitHub hidden features guide.");
+}
+greet();
