@@ -15,10 +15,6 @@ jobs:
       - name: 📁 Checkout Code
         uses: actions/checkout@v4
 
-      # 🔴 TEST TRIGGER: An unreviewed/vulnerable version of an action
-      # This old version contains a critical script injection risk.
-      - name: 🛡️ Injected Vulnerable Action
-        uses: actions/stale@v3.0.0
 
       - name: 🛡️ Run Dependency Review
         uses: actions/dependency-review-action@v4
