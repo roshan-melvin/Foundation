@@ -5,8 +5,7 @@ on:
     branches: [ main, master, develop ]
 
 permissions:
-  contents: read 
-  pull-requests: write # 💥 Highly recommended to see the vulnerability breakdown in PR comments
+  contents: read # Required to fetch the repository files
 
 jobs:
   dependency-review:
@@ -19,5 +18,8 @@ jobs:
       - name: 🛡️ Run Dependency Review
         uses: actions/dependency-review-action@v4
         with:
-          # This catches the critical flaw introduced by actions/stale@v3.0.0
+          # 🔴 CRITICAL: Fail the PR check if a package has a critical or high vulnerability
           fail-on-severity: high 
+          
+          # 🚫 Block specific bad open-source licenses if desired (e.g., AGPL-3.0)
+          # deny-licenses: LGPL-3.0, AGPL-3.0
