@@ -1,0 +1,24 @@
+name: Dependency Review
+
+on:
+  pull_request:
+    branches: [ main, master, develop ]
+
+permissions:
+  contents: read # Required to fetch the repository files
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📁 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🛡️ Run Dependency Review
+        uses: actions/dependency-review-action@v4
+        with:
+          # 🔴 CRITICAL: Fail the PR check if a package has a critical or high vulnerability
+          fail-on-severity: high 
+          
+          # 🚫 Block specific bad open-source licenses if desired (e.g., AGPL-3.0)
+          # deny-licenses: LGPL-3.0, AGPL-3.0
