@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 🛡️ Run Dependency Review
-        uses: actions/dependency-review-action@v4
+        uses: actions/dependency-review-action@v5
         with:
           # 🔴 CRITICAL: Fail the PR check if a package has a critical or high vulnerability
           fail-on-severity: high 
