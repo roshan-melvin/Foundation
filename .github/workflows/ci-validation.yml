@@ -16,7 +16,7 @@ jobs:
 
       # --- STAGE 1: SECRET SCANNING GATE ---
       - name: 🛡️ Scan for Leaked Secrets
-        uses: gitleaks/gitleaks-action@v2
+        uses: gitleaks/gitleaks-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # Note: If a developer pushes a hardcoded token format, this step kills the PR build instantly.
